@@ -4,11 +4,10 @@ const GRAVITY: int = 4200
 const JUMP_SPEED: int = -1800
 
 var started: bool = false  # set by Main when the game begins
-var finished: bool = false # set by Main when level ends
 
 func _physics_process(delta: float) -> void:
-	# Before game starts or after level finished: stay idle
-	if not started or finished:
+	# Before the game starts: stay idle, don't move
+	if not started:
 		velocity = Vector2.ZERO
 		$run.disabled = false
 		$AnimatedSprite2D.play("idle")

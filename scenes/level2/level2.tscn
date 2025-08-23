@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://cwxm3u8h2psf7"]
+
+[ext_resource type="Script" uid="uid://d3ofnnbdibplh" path="res://scrips/level_2.gd" id="1_y5pcy"]
+[ext_resource type="PackedScene" uid="uid://b1yeul4c33rck" path="res://scenes/level1/parallax_background.tscn" id="2_lh58e"]
+[ext_resource type="PackedScene" uid="uid://blp8nw1p5yqf7" path="res://scenes/level1/floor.tscn" id="3_i8lq7"]
+[ext_resource type="PackedScene" uid="uid://07woifrvx6d8" path="res://scenes/level1/player.tscn" id="4_27jnd"]
+[ext_resource type="Script" uid="uid://dwmbrwiepsjq2" path="res://scrips/player2.gd" id="5_4700a"]
+[ext_resource type="PackedScene" uid="uid://da0x673ji1mcy" path="res://scenes/level1/hud1.tscn" id="5_ujyg4"]
+[ext_resource type="PackedScene" uid="uid://bomp2dmjwk65l" path="res://scenes/level1/game_over.tscn" id="6_mqis8"]
+
+[sub_resource type="AudioStream" id="AudioStream_iofbg"]
+
+[node name="Level2" type="Node"]
+script = ExtResource("1_y5pcy")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_lh58e")]
+
+[node name="floor" parent="." instance=ExtResource("3_i8lq7")]
+
+[node name="player2" parent="." instance=ExtResource("4_27jnd")]
+position = Vector2(66.0001, 399)
+script = ExtResource("5_4700a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+
+[node name="HUD2" parent="." instance=ExtResource("5_ujyg4")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_mqis8")]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStream_iofbg")
+autoplay = true
+bus = &"Music"
