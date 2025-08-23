@@ -179,5 +179,5 @@ shape = SubResource("CircleShape2D_lj8jo")
 position = Vector2(51.875, 53.625)
 shape = SubResource("CircleShape2D_g2brh")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_g2brh")

@@ -3,3 +3,7 @@ res://scenes/level1/hud.tscn
 res://scenes/level1/floor.tscn
 res://scenes/level1/stump.tscn
 res://scenes/level1/bird.tscn
+res://scrips/player.gd
+res://scenes/level1/player.tscn
+res://scenes/level1/music.tscn
+res://default_bus_layout.tres
