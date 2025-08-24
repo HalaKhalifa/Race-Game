@@ -18,7 +18,7 @@ var ground_height : int
 var difficulty: float = 0
 const MAX_DIFFICULTY : int = 2
 const SPEED_MODIFIER : int = 5000
-const LEVEL_END_SCORE : int = 2000
+const LEVEL_END_SCORE : int = 20000
 var game_running : bool = false
 var last_obs
 

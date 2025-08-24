@@ -1,4 +1,2 @@
+res://scenes/level1/ai_npc.tscn
 res://scenes/level1/level1.tscn
-res://scenes/level2/level2.tscn
-res://scenes/level1/player.tscn
-res://scrips/level1.gd
