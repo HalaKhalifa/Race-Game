@@ -118,7 +118,7 @@ func generate_obs() -> void:
 			obs = obs_type.instantiate()
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
-			var obs_x : int = screen_size.x + score + 100 + (i * 100)
+			var obs_x = screen_size.x + score + 100 + (i * 100)
 			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
@@ -143,7 +143,8 @@ func update_score_labels() -> void:
 	if remaining < 0:
 		remaining = 0
 	$HUD1/ScoreLabel.text = "Score: %d" % int(score / 10)
-	$HUD1/H.text = "Remaining: %d" % int(remaining / 10)
+	$HUD1/H.text = "Remaining: %d" % int(remaining / 10.0)
+
 
 func adjust_difficulty() -> void:
 	difficulty = score / SPEED_MODIFIER
@@ -165,4 +166,4 @@ func level_finished() -> void:
 
 func load_level2() -> void:
 	var level2_scene = preload("res://scenes/level2/level2.tscn")
-	get_tree().change_scene_to(level2_scene)
+	get_tree().change_scene_to_packed(level2_scene)
