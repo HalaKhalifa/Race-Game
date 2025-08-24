@@ -115,7 +115,7 @@ func generate_obs() -> void:
 			obs = obs_type.instantiate()
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
-			var obs_x : int = screen_size.x + score + 100 + (i * 100)
+			var obs_x = screen_size.x + score + 100 + (i * 100)
 			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
@@ -129,8 +129,8 @@ func generate_obs() -> void:
 				if last_obs:
 					obs_x = last_obs.position.x + min_gap
 				else:
-					obs_x = screen_size.x + score + min_gap
-				var obs_y : int = bird_heights[randi() % bird_heights.size()]
+					obs_x = roundi(screen_size.x) + int(score) + int(min_gap)
+				var obs_y = bird_heights[randi() % bird_heights.size()]
 				add_obs(obs, obs_x, obs_y)
 
 func add_obs(obs, x, y) -> void:
