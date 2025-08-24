@@ -18,13 +18,14 @@ var ground_height : int
 var difficulty: float = 0
 const MAX_DIFFICULTY : int = 2
 const SPEED_MODIFIER : int = 5000
-const LEVEL_END_SCORE : int = 20000 
+const LEVEL_END_SCORE : int = 2000
 var game_running : bool = false
 var last_obs
 
 # --- Game start flag ---
 var started: bool = false
 var level_completed: bool = false
+var end_sound_played: bool = false   # <-- flag for end sound
 
 func _ready() -> void:
 	screen_size = get_window().size
@@ -39,6 +40,7 @@ func new_game() -> void:
 	game_running = false
 	started = false
 	level_completed = false
+	end_sound_played = false   # <-- reset flag
 	get_tree().paused = false
 
 	for obs in obstacles:
@@ -71,6 +73,12 @@ func _process(_delta: float) -> void:
 	# After level completion: wait for Enter to go to Level 2
 	if level_completed:
 		$player.get_node("AnimatedSprite2D").play("idle")  # ensure idle state
+		
+		# play end sound only once
+		if not end_sound_played:
+			$player/f.play()
+			end_sound_played = true
+
 		if Input.is_action_just_pressed("ui_accept"):
 			load_level2()
 		return
@@ -144,7 +152,6 @@ func update_score_labels() -> void:
 		remaining = 0
 	$HUD1/ScoreLabel.text = "Score: %d" % int(score / 10)
 	$HUD1/H.text = "Remaining: %d" % int(remaining / 10.0)
-
 
 func adjust_difficulty() -> void:
 	difficulty = score / SPEED_MODIFIER
