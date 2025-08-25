@@ -8,11 +8,14 @@ size = Vector2(2302, 68.5)
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.847059, 0, 1)
+self_modulate = Color(1, 1, 0, 1)
 texture_filter = 1
 position = Vector2(0, 552)
 texture = ExtResource("1_c1ytm")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1151, 614.25)
 shape = SubResource("RectangleShape2D_ukw5w")

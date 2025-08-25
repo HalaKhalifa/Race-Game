@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkplcuh8n5hsy"]
+
+[ext_resource type="Texture2D" uid="uid://4wc5o1uo3dui" path="res://assets/background/plx-1.png" id="1_mk8nb"]
+[ext_resource type="Texture2D" uid="uid://cn8cps3i1q5lh" path="res://assets/background/plx-2.png" id="2_ruc0d"]
+[ext_resource type="Texture2D" uid="uid://81a1u25lusj4" path="res://assets/background/plx-3.png" id="3_86jx2"]
+[ext_resource type="Texture2D" uid="uid://dgrc07pmmva0x" path="res://assets/background/plx-4.png" id="4_6xt1u"]
+[ext_resource type="Texture2D" uid="uid://b6t3ec5g1ytoy" path="res://assets/background/plx-5.png" id="5_1y714"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.25098, 0.25098, 0.25098, 1)
+texture = ExtResource("1_mk8nb")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.219608, 0.219608, 0.219608, 1)
+texture = ExtResource("2_ruc0d")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+texture = ExtResource("3_86jx2")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(0.180392, 0.180392, 0.180392, 1)
+texture = ExtResource("4_6xt1u")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+modulate = Color(0.14902, 0.14902, 0.14902, 0.933333)
+texture = ExtResource("5_1y714")
+centered = false

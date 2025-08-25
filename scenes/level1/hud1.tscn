@@ -5,11 +5,14 @@
 [node name="HUD1" type="CanvasLayer"]
 
 [node name="ScoreLabel" type="Label" parent="."]
+offset_left = 2.0
 offset_top = 8.0
-offset_right = 270.0
+offset_right = 205.0
 offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0.827451, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cebay")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Score : "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -18,12 +21,14 @@ vertical_alignment = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -375.0
+offset_left = -281.0
 offset_top = 5.0
 offset_bottom = 45.0
 grow_horizontal = 0
+theme_override_colors/font_color = Color(0.886275, 0.960784, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cebay")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 30
 text = "Remaining:"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -40,9 +45,11 @@ offset_right = 135.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.92549, 0.109804, 0.184314, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cebay")
 theme_override_font_sizes/font_size = 40
-text = "press space to play :"
+text = "Press Enter to Start "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -56,6 +63,7 @@ offset_left = -40.0
 offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_cebay")
 theme_override_font_sizes/font_size = 30
 text = "Level 1"

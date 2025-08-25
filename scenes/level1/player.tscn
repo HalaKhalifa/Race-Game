@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://07woifrvx6d8"]
+[gd_scene load_steps=27 format=3 uid="uid://07woifrvx6d8"]
 
 [ext_resource type="Script" uid="uid://c8k3kv16jhhd1" path="res://scrips/player.gd" id="1_dn4c7"]
 [ext_resource type="Texture2D" uid="uid://b8whbidvyxaqs" path="res://assets/r/bunny-Sheet.png" id="1_lj8jo"]
 [ext_resource type="AudioStream" uid="uid://b4dj02a2ndqgd" path="res://assets/sounds/jump.wav" id="2_g2brh"]
 [ext_resource type="AudioStream" uid="uid://cs76iu8c1pdyk" path="res://assets/sounds/finsh.wav" id="4_qiswm"]
+[ext_resource type="AudioStream" uid="uid://dg7mg6mjxwptv" path="res://assets/sounds/game-over.mp3" id="5_xyg8o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2brh"]
 atlas = ExtResource("1_lj8jo")
@@ -185,3 +186,6 @@ stream = ExtResource("2_g2brh")
 
 [node name="f" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_qiswm")
+
+[node name="d" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_xyg8o")
